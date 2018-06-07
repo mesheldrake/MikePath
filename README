@@ -1,0 +1,13 @@
+MikePath is an SVG path library developed for the surfboard modeling and part rendering system behind the <a href="http://sheldrake.net/surfboards/">cardboard surfboard project</a>.
+
+MikePath is an SVG path tool for a CAD/CAM context. The Javascript version is used in a browser-based surfboard design system, while the Perl version is used in a part rendering system that produces CNC production files.
+
+MikePath is a mess in places. MikePath only works with absolute coordinates. MikePath never got around to supporting quadratic Beziers. (Cubic Beziers are definitely supported - they were the starting point.) MikePath uses banner style code indenting. MikePath may be quirky.
+
+The seed of MikePath was <a href="https://www.tinaja.com/glib/cubemath.pdf">Don Lancaster's presentation of cubic Bezier math</a>.
+The SVG 1.1 spec's <a href="https://www.w3.org/TR/SVG11/implnote.html#ArcImplementationNotes">elliptical arc implementation notes</a> were helpful. Plenty of the math Mike worked out himself, so if it's suboptimal and confusing, that's why.
+
+MikePath is named after Mike, and he didn't expect to make it public when he named it that, and now he's embarrassed.
+
+The successor to MikePath is MPath.
+
