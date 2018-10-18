@@ -1562,11 +1562,11 @@ function EllipticalArc(p1,r,phi,large_arc_flag,sweep_flag,p2,precision) {
 	//if (this.sweep_flag == 0 && this.delta_theta > 0) {this.delta_theta -= 2 * Math.PI;}
 	//if (this.sweep_flag == 1 && this.delta_theta < 0) {this.delta_theta += 2 * Math.PI;}
 
-	if (this.sweep_flag==1) {alert('sweepone,dth:'+this.delta_theta);
+	if (this.sweep_flag==1) { //alert('sweepone,dth:'+this.delta_theta);
 		if (this.delta_theta < 0) {
 			//if (!this.large_arc_flag) {this.delta_theta *= -1 ;}
 			//else {
-			alert('changing');
+			//alert('changing');
 				this.delta_theta += 2 * Math.PI;
 			//	}
 			}
