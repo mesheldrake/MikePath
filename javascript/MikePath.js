@@ -1916,9 +1916,7 @@ EllipticalArc.prototype.solveYPrimeforTheta = function(yp) {
 	var retcand=new Array(t,other_t,other_t2,other_t3);
 	var ret=new Array();
 	for (var i=0;i<retcand.length;i++) {
-		//alert('within test:'+this.theta1+'  >'+retcand[i]+'<    '+this.theta2+ ' ? '+this.isWithinThetaRange(retcand[i]));
 		if (this.isWithinThetaRange(retcand[i])) {
-			//alert('          giving i:'+this.arcThetaToNormalizedTheta(retcand[i]));
 			ret.push(this.arcThetaToNormalizedTheta(retcand[i]));
 			}
 		}
@@ -1936,8 +1934,7 @@ EllipticalArc.prototype.solveXPrimeforTheta = function(xp) {
 	var ret=new Array();
 	for (var i=0;i<retcand.length;i++) {
 		if (this.isWithinThetaRange(retcand[i])) {
-			//ret.push(this.arcThetaToNormalizedTheta(retcand[i]));
-			ret.push(this.arcThetaToNormalizedTheta(t));
+			ret.push(this.arcThetaToNormalizedTheta(retcand[i]));
 			continue;
 			}
 		}
