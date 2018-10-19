@@ -618,6 +618,8 @@ MikePath.prototype.scale = function() {
 		var pts=extractPointsFromPathSpec(this.pathSegmentSpecs[i]);
 		if (this.pathSegmentSpecs[i].substring(0,1) == 'A') {
 			newspec+=this.pathSegmentSpecs[i].substring(0,1);
+            // flip sweep flag when just one scale is negative
+            if ( (yscale < 0 && xscale > 0) || (yscale > 0 && xscale < 0)) {pts[3] = pts[3] == 1 ? 0 : 1;}
 			for (var j=0;j<pts.length - 1;j++) {newspec+=(typeof(pts[j]) == 'Array')?(pts[j][0])+','+(pts[j][1]) : pts[j]+','};
 			newspec=newspec.substring(0,newspec.length - 1);
 			newspec+=','+(parseFloat(pts[pts.length - 1][0]) * xscale)+','+(parseFloat(pts[pts.length - 1][1]) * yscale);
